@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chatter_room.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>Chatter</title>
+    <script src="https://kit.fontawesome.com/009c2a232d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <center>
+        <button id="log_out" onclick="logout()" class="btn btn-danger"> Log Out</button>
+        <div id="main_div"> 
+            <div id="head">
+                <p> <i class="far fa-comments"></i> Chatter</h2>&nbsp;
+            </div>
+            <hr>
+            <br>
+            <p id="welcome"></p>
+            <br>
+            <h3 class="t2">Room id :</h3>
+            <br>
+            <input id="room_id" class="t1" placeholder="Enter Room id" class="form-control">
+            <br>
+            <br>
+            <br>
+            <button class="btn btn-success" id="add_room" onclick="Add_Room()">Add Room</button>
+            <div id="output"></div>
+        </div>
+    </center>
+    <script src="chatter_room.js"></script>
+</body>
+
+</html>

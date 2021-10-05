@@ -1,4 +1,4 @@
-body {
+body{
      background-image: linear-gradient(to left, rgb(248, 233, 23) 50%, rgb(16, 230, 33) 50%);
      background-size: cover;
 }
@@ -19,7 +19,6 @@ body {
      font-variant: inherit;
      font-family: 'Grand Hotel', cursive;
      font-weight: 500;
-     margin: 20px;
      tab-size: 2px;
      font-size: 55px;
 }
