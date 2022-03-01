@@ -1,46 +1,89 @@
-#log_out{
-    height : 55px;
+#log_out {
+    height: 55px;
     width: 250px;
     font-size: 25px;
 }
-body{
+
+body {
     background-image: linear-gradient(to left, rgb(248, 233, 23) 50%, rgb(16, 230, 33) 50%);
     background-size: cover;
 }
-#logo{
+
+#logo {
     height: 100px;
     width: 100px;
 }
-#main{
+
+#main {
     background-color: white;
     border: black, 3px, solid;
     width: 80%;
     height: 800px;
-    border-radius: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
     margin-top: 100px;
-    padding: 50px;
+    padding: 20px;
 }
-.input_div_message_page{
-    bottom: 0;
-    font-size: 22px;
-    width: 100%;
-    position: fixed;
+
+.input_div_message_page {
+    width: 80%;
+    display:flex;
+    font-size: 32px;
+    padding:10px;
+    padding-left: 40px;
+    background-color: rgb(195, 195, 195);
 }
+
 #head {
-	color: rgb(16, 230, 33);
-	font-size: 35px;
-	font-variant: inherit;
-	font-family: 'Grand Hotel', cursive;
-	font-weight: 500;
-	tab-size: 2px;
-	font-size: 55px;
+    color: rgb(16, 230, 33);
+    font-size: 35px;
+    font-variant: inherit;
+    font-family: 'Grand Hotel', cursive;
+    font-weight: 500;
+    tab-size: 2px;
+    font-size: 55px;
 }
-#msg{
+
+#msg {
     width: 90%;
-    float: left;
+    height: 60px;
+    font-size: 32px;
 }
-#send{
+
+#send {
     width: 10%;
-    float: right;
     border-radius: 0px;
+    padding: 5px;
+    font-size: 18px;
+}
+.owner_div{
+    border:5px solid rgb(2, 189, 2);
+    color: rgb(0, 0, 0);
+    align-items: right;
+    border-radius: 20px;
+    padding: 10px;
+    padding-top: 10px;
+    border-bottom-right-radius: 0px;
+    font-size: 20px;
+    width: fit-content;
+}
+.owner_name{
+    font-size: 25px;
+    color: rgb(27, 12, 235);
+}
+.friend_div{
+    border:5px solid rgb(54, 0, 202);
+    color: black;
+    
+    border-radius: 20px;
+    padding: 10px;
+    padding-top: 10px;
+    border-bottom-left-radius: 0px;
+    font-size: 20px;
+    width: fit-content;
+    align-items: left;
+}
+.friend_name{
+    font-size: 25px;
+    color: red;
 }

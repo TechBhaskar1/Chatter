@@ -28,7 +28,6 @@ function send() {
 
 function getData() {
       firebase.database().ref("/" + room_name).on('value', function (snapshot) {
-            document.getElementById("output").innerHTML = "";
             snapshot.forEach(function (childSnapshot) {childKey = childSnapshot.key;childData = childSnapshot.val();
                   if (childKey != "purpose") {firebase_message_id = childKey;message_data = childData;
                         //Start code
@@ -37,9 +36,9 @@ function getData() {
 
                         names = message_data['name'];
                         message = message_data['message'];
-                        like = message_data['like'];
-
-
+                        
+                        div="<div class='owner_div'><div class='owner_name'><b>"+names+"</b></div>"+message+"<hr></div>"
+                        document.getElementById("output").innerHTML = div;
 
                         // name_with_tag = "<h4>" + name + "<img src='tick.png' class='user_tick'></h4>";
 
@@ -60,17 +59,6 @@ function getData() {
 }
 
 getData();
-
-function updateLikes(message_id) {
-      console.log("clicked like button : " + message_id);
-      button_id = message_id;
-      likes = document.getElementById(button_id).value;
-
-      updated_likes = Number(like) + 1;
-      firebase.database().ref(room_name).child(message_id).update({
-            like:updated_likes
-      });
-}
 
 function logout() {
       localStorage.removeItem("Room_name");
