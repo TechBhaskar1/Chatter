@@ -46,3 +46,8 @@ body{
 	border:rgb(207, 194, 11) 2px solid ;
 	background-color: rgba(248, 233, 23, 0);
 }
+#warn{
+	color: red;
+	font-size: 20px;
+	
+}

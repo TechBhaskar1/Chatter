@@ -15,9 +15,20 @@ firebase.initializeApp(firebaseConfig);
 
 
 var user_name = localStorage.getItem("userName");
+var tag_name = localStorage.getItem("tagName");
 
-document.getElementById("welcome").innerHTML = "Welcome " + user_name + "!";
-
+if (tag_name.length == 0) {
+      document.getElementById("welcome").innerHTML = "Welcome " + user_name + "<span style='color:grey;'>(Member)</span>!";
+}
+if(tag_name.length > 0){
+      document.getElementById("welcome").innerHTML = "Welcome " + user_name + "(<span style='color:blue;'>"+tag_name+"</span>)!";
+}
+if(user_name=="Bhaskar09"){
+      document.getElementById("welcome").innerHTML = "Welcome Bhaskar(<span style='color:red;'><b>Owner</b></span>)!";
+}
+if(user_name=="Namrata01"){
+      document.getElementById("welcome").innerHTML = "Welcome Namrata(<span style='color:lime;'><b>Teacher</b></span>)!";
+}
 function addRoom() {
       room_name = document.getElementById("room_id").value;
       firebase.database().ref("/").child(room_name).update({
