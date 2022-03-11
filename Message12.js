@@ -9,12 +9,87 @@ var firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-
+var now = new Date();
 
 var user_name = localStorage.getItem("userName");
 var room_name = localStorage.getItem("Room_name");
 var tag_name = localStorage.getItem("tagName");
-console.log(room_name)
+
+console.log(room_name);
+
+min = now.getMinutes();
+hour = now.getHours();
+medrinium = "am";
+
+
+if(hour ==1){
+      hour=1;
+      medrinium="am";
+}else if(hour==2 ) {
+      medrinium="am";
+}else if(hour==3 ) {
+      medrinium="am";
+}else if(hour==4 ) {
+      medrinium="am";
+}else if(hour==5 ) {
+      medrinium="am";
+}else if(hour==6 ) {
+      medrinium="am";
+}else if(hour==7 ) {
+      medrinium="am";
+}else if(hour==8 ) {
+      medrinium="am";
+}else if(hour==9) {
+      medrinium="am";
+}else if(hour==10 ) {
+      medrinium="am";
+}else if(hour==11 ) {
+      medrinium="am";
+}else if(hour==12 ) {
+      hour=12;
+      medrinium="pm";
+}else if(hour==13){
+      hour=1;
+      medrinium="pm";
+}else if(hour==14 ) {
+      hour=2;
+      medrinium="pm";
+}else if(hour==15 ) {
+      hour=3
+      medrinium="pm";
+}else if(hour==16 ) {
+      hour=4
+      medrinium="pm";
+}else if(hour==17 ) {
+      hour=5
+      medrinium="pm";
+}else if(hour==18 ) {
+      hour=6
+      medrinium="pm";
+}else if(hour==19 ) {
+      hour=7
+      medrinium="pm";
+}else if(hour==20 ) {
+      hour=8
+      medrinium="pm";
+}else if(hour==21 ) {
+      hour=9
+      medrinium="pm";
+}else if(hour==22 ) {
+      hour=10
+      medrinium="pm";
+}else if(hour==23 ) {
+      hour=11
+      medrinium="pm";
+}else if(hour==0 ) {
+      hour=12
+      medrinium="am";
+} 
+time="<div id='time'>"+hour+":"+min+" "+medrinium+"</div>";
+
+      
+
+
 if (tag_name.length == 0) {
       tag_data="<span style='color:grey;'>(Member)</span>"
 }
@@ -64,9 +139,10 @@ function getData() {
                         like_button = "<button class='btn btn-warning' id=" + firebase_message_id + " value=" + like + " onclick='updateLikes(this.id)'>";
 
                         span_with_tag = "<span class='glyphicon glyphicon-thumbs-up'>Likes : " + like + "</span></button>";
-
+                        
+                        
                         ediv="</div>"
-                        row = sdiv + name_with_tag + hr + messgae_with_tag + like_button + span_with_tag + ediv + hr;
+                        row = sdiv + name_with_tag + hr + messgae_with_tag + like_button + span_with_tag +time + ediv + hr;
 
                         document.getElementById("output").innerHTML += row;
 

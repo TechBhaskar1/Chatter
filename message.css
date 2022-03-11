@@ -19,9 +19,7 @@ body {
     border: black, 3px, solid;
     width: 80%;
     height: 800px;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    margin-top: 100px;
+   
     padding: 20px;
     overflow-y: scroll;
     color: black;
@@ -44,6 +42,13 @@ body {
     font-weight: 500;
     tab-size: 2px;
     font-size: 55px;
+    background-color: aliceblue;
+    width: 80%;
+
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    margin-top: 100px;
+    padding: 20px;
     
 }
 
@@ -82,4 +87,9 @@ body {
     text-align: left;
     font-weight: bolder;
     font-size: 30px;
+}
+#time{
+    font-size: 18px;
+    color: black;
+    float: right;
 }
