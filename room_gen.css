@@ -57,11 +57,12 @@ body{
 }
 
 #output{
-    background-color: rgba(77, 77, 77, 0.548);
+    background-image: linear-gradient(to right, rgb(248, 233, 23) 50%, rgb(16, 230, 33) 50%);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    color: white;
-    font-size: 20px;
+    color: rgb(49, 17, 17);
+    font-size: 30px;
     padding-top: 15px;
+    font-weight: bolder;
     
 }
