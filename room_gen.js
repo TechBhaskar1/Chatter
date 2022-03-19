@@ -30,11 +30,11 @@ if(user_name=="Namrata01"){
       document.getElementById("welcome").innerHTML = "Welcome Namrata(<span style='color:lime;'><b>Teacher</b></span>)!";
 }
 function addRoom() {
-      room_name = document.getElementById("room_id").value;
-      firebase.database().ref("/").child(room_name).update({
+      Room_name = document.getElementById("room_id").value;
+      firebase.database().ref("/").child(Room_name).update({
             purpose: "adding room name"
       });
-      localStorage.setItem("room_name", room_name);
+      localStorage.setItem("Room_name", Room_name);
       window.location = "Message.html";
 }
 
@@ -45,7 +45,7 @@ function getData() {
                   childKey = childSnapshot.key;
                   Room_names = childKey;
                   //Start code
-                  console.log("room_names =" + Room_names);
+                  console.log("Room_names =" + Room_names);
                   row = "<div class='room_name' id=" + Room_names + " onclick='redirectToRoomName(this.id)'>#" + Room_names + "</div><hr>";
                   document.getElementById("output").innerHTML += row;
                   //End code
@@ -65,3 +65,6 @@ function logout() {
       localStorage.removeItem("userName");
       window.location = "index.html";
 }
+function open() {
+      localStorage.removeItem("Room_name");
+  }

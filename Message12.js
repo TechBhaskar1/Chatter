@@ -12,10 +12,10 @@ firebase.initializeApp(firebaseConfig);
 var now = new Date();
 
 var user_name = localStorage.getItem("userName");
-var room_name = localStorage.getItem("Room_name");
+var Room_name = localStorage.getItem("Room_name");
 var tag_name = localStorage.getItem("tagName");
 
-console.log(room_name);
+console.log(Room_name);
 
 min = now.getMinutes();
 hour = now.getHours();
@@ -107,7 +107,7 @@ if(user_name=="Namrata01"){
 
 function send() {
       msg = document.getElementById("msg").value;
-      firebase.database().ref(room_name).push({
+      firebase.database().ref(Room_name).push({
             time:"<div id='time'>"+hour+":"+min+" "+medrinium+"</div>",
             tag:tag_data,
             name: user_name,
@@ -119,7 +119,7 @@ function send() {
 
 
 function getData() {
-      firebase.database().ref("/" + room_name).on('value', function (snapshot) {document.getElementById("output").innerHTML = "";snapshot.forEach(function (childSnapshot) {childKey = childSnapshot.key;childData = childSnapshot.val();
+      firebase.database().ref("/" + Room_name).on('value', function (snapshot) {document.getElementById("output").innerHTML = "";snapshot.forEach(function (childSnapshot) {childKey = childSnapshot.key;childData = childSnapshot.val();
                   if (childKey != "purpose") {
                         firebase_message_id = childKey;
                         message_data = childData;
@@ -155,16 +155,18 @@ function getData() {
 }
 
 getData();
+
 function open(){
-      document.getElementById("room_id").innerHTML="room id :" +room_name;
+      document.getElementById("room_id").innerHTML="room id :" +Room_name;
 }
+
 function updateLikes(message_id) {
       console.log("clicked like button : " + message_id);
       button_id = message_id;
       likes = document.getElementById(button_id).value;
 
       updated_likes = Number(like) + 1;
-      firebase.database().ref(room_name).child(message_id).update({
+      firebase.database().ref(Room_name).child(message_id).update({
             like:updated_likes
       });
 }

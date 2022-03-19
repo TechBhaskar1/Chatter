@@ -5,8 +5,8 @@ function login() {
     localStorage.setItem("tagName", tag_name);
     if (user_name.length > 0) {
         window.location = "room_gen.html";
-    }
-    else{
-        document.getElementById("warn").innerText="!!Name Required";
+    } else {
+        document.getElementById("warn").innerText = "!!Name Required";
     }
 }
+
