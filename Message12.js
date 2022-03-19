@@ -85,7 +85,7 @@ if(hour ==1){
       hour=12
       medrinium="am";
 } 
-time="<div id='time'>"+hour+":"+min+" "+medrinium+"</div>";
+
 
       
 
@@ -108,6 +108,7 @@ if(user_name=="Namrata01"){
 function send() {
       msg = document.getElementById("msg").value;
       firebase.database().ref(room_name).push({
+            time:"<div id='time'>"+hour+":"+min+" "+medrinium+"</div>",
             tag:tag_data,
             name: user_name,
             message: msg,
@@ -125,7 +126,8 @@ function getData() {
                         //Start code
                         console.log(firebase_message_id);
                         console.log(message_data);
-                        tag = message_data['tag']
+                        tag = message_data['tag'];
+                        time = message_data['time'];
                         name = message_data['name'];
                         message = message_data['message'];
                         like = message_data['like'];
@@ -142,7 +144,7 @@ function getData() {
                         
                         
                         ediv="</div>"
-                        row = sdiv + name_with_tag + hr + messgae_with_tag + like_button + span_with_tag +time + ediv + hr;
+                        row = sdiv + name_with_tag + hr + messgae_with_tag + like_button + span_with_tag +time+ ediv + hr;
 
                         document.getElementById("output").innerHTML += row;
 
